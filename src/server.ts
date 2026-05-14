@@ -12,7 +12,7 @@ app.get("/books", (req, res)=>{
 app.get("/books/:id", (req, res)=>{
     const bookID= Number(req.params.id)
     if(isNaN(bookID)){
-        res.status(400).json({Error : `ID must be a number`})
+       return res.status(400).json({Error : `ID must be a number`})
     }
     const bookfound= books.find((book)=> book.id===bookID)
     if (!bookfound){
@@ -29,9 +29,14 @@ app.post("/books", (req, res)=>{
 
     const newBook = {id , title , author}
 
-    books.push(newBook)
-    return res.status(201).json({Message : "Book created", id})
+    const prestnt = books.find((book)=> newBook.title===book.title && newBook.author===book.author)
 
+    if(!prestnt){
+        books.push(newBook);
+        return res.status(201).json({ Message: "Book created", id });
+    }else{
+        return res.status(400).json({Error : `Book is already present`})
+    }
 });
 
 app.delete("/books/:id", (req, res)=>{
