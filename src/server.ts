@@ -1,9 +1,19 @@
 import express from "express";
 import { books } from "./bd";
+import fs from "fs"
 
 const app = express();
 const PORT = 8000;
+
+//Middleware
 app.use(express.json());
+
+app.use((req,res,next)=>{
+    const date = new Date().toISOString()
+    const log = `Time : ${date}, Method : ${req.method}, Route : ${req.url} \n`
+    fs.appendFileSync("./Log.txt", log, "utf-8")
+    next()
+})
 
 app.get("/books", (req, res) => {
   res.json(books);
