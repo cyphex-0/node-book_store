@@ -104,3 +104,17 @@ Time : 2026-05-16T19:29:50.007Z, Method : DELETE, Route : /books/9131459d-d909-4
 Time : 2026-05-16T19:30:02.404Z, Method : DELETE, Route : /books/a7d66ac0-5ee6-4753-9453-8716e386c191 
 Time : 2026-05-16T19:30:42.996Z, Method : GET, Route : /books 
 Time : 2026-05-16T19:30:46.610Z, Method : GET, Route : /authors 
+Time : 2026-05-16T19:31:49.133Z, Method : GET, Route : /books 
+Time : 2026-05-16T19:32:11.865Z, Method : POST, Route : /books 
+Time : 2026-05-16T19:32:29.926Z, Method : POST, Route : /authors 
+Time : 2026-05-16T19:32:35.700Z, Method : POST, Route : /authors 
+Time : 2026-05-16T19:32:44.552Z, Method : GET, Route : /authors 
+Time : 2026-05-16T19:33:07.198Z, Method : POST, Route : /books 
+Time : 2026-05-16T19:33:16.464Z, Method : GET, Route : /books 
+Time : 2026-05-16T19:33:31.921Z, Method : POST, Route : /authors 
+Time : 2026-05-16T19:33:50.847Z, Method : DELETE, Route : /authors/1a4347ed-ee99-4436-a6a5-8f3cd48fce57 
+Time : 2026-05-16T19:34:11.542Z, Method : DELETE, Route : /books/cfe60da8-5337-4a3e-ab95-1eb601564929 
+Time : 2026-05-16T19:34:15.873Z, Method : GET, Route : /books 
+Time : 2026-05-16T19:34:20.556Z, Method : GET, Route : /authors 
+Time : 2026-05-16T19:34:35.777Z, Method : DELETE, Route : /authors/1a4347ed-ee99-4436-a6a5-8f3cd48fce57 
+Time : 2026-05-16T19:34:40.557Z, Method : GET, Route : /authors 
