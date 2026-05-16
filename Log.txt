@@ -54,3 +54,8 @@ Time : 2026-05-16T18:46:51.391Z, Method : POST, Route : /authors
 Time : 2026-05-16T18:46:58.309Z, Method : GET, Route : /authors 
 Time : 2026-05-16T18:47:45.022Z, Method : POST, Route : /books 
 Time : 2026-05-16T18:47:52.391Z, Method : GET, Route : /books 
+Time : 2026-05-16T18:53:12.288Z, Method : DELETE, Route : /authors/b7bcd8bf-16ae-4239-90c6-a1579e4b2814 
+Time : 2026-05-16T18:53:21.216Z, Method : GET, Route : /authors 
+Time : 2026-05-16T18:53:37.624Z, Method : DELETE, Route : /authors/7bcd8bf-16ae-4239-90c6-a1579e4b2814 
+Time : 2026-05-16T18:54:26.550Z, Method : GET, Route : /authors 
+Time : 2026-05-16T18:54:39.148Z, Method : DELETE, Route : /authors/7bcd8bf-16ae-4239-90c6-a1579e4b2814 
