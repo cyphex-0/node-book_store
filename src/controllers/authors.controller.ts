@@ -53,8 +53,9 @@ export const deleteAuthor = async (
         .where(eq(authorTable.id, authorID))
         .limit(1);
       if (isPresent.length > 0) {
-        return res.status(404).json({ Error: `id ${authorID} not found` });
+        await db.delete(authorTable).where(eq(authorTable.id, authorID));
+        return res.status(200).json({ Success: `Author deleted` });
       }
-      await db.delete(authorTable).where(eq(authorTable.id, authorID));
-      return res.status(200).json({ Success: `Author deleted` });
+      return res.status(404).json({ Error: `id ${authorID} not found` });
+      
 }

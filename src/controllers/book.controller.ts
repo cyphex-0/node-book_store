@@ -3,7 +3,6 @@ import { db } from "../db/index";
 import { and, eq } from "drizzle-orm";
 import type { Request, Response, NextFunction } from "express";
 
-
 export const getAllBook = async (
   req: Request,
   res: Response,
@@ -63,8 +62,6 @@ export const createBook = async (
   return res.status(201).json({ Message: "Book created", id: newBook!.id });
 };
 
-
-
 export const deleteBookById = async (
   req: Request,
   res: Response,
@@ -77,8 +74,8 @@ export const deleteBookById = async (
     .where(eq(bookTable.id, bookID))
     .limit(1);
   if (isPresent.length > 0) {
-    return res.status(404).json({ Error: `id ${bookID} not found` });
+    await db.delete(bookTable).where(eq(bookTable.id, bookID));
+    return res.status(200).json({ Success: `Book deleted` });
   }
-  await db.delete(bookTable).where(eq(bookTable.id, bookID));
-  return res.status(200).json({ Success: `Book deleted` });
+  return res.status(404).json({ Error: `id ${bookID} not found` });
 };
