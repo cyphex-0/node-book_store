@@ -16,3 +16,11 @@ Time : 2026-05-16T11:39:49.949Z, Method : POST, Route : /books
 Time : 2026-05-16T11:40:14.860Z, Method : POST, Route : /books 
 Time : 2026-05-16T11:40:19.403Z, Method : POST, Route : /books 
 Time : 2026-05-16T11:40:52.970Z, Method : DELETE, Route : /books/20 
+Time : 2026-05-16T11:45:56.444Z, Method : DELETE, Route : /books/20 
+Time : 2026-05-16T11:59:20.716Z, Method : GET, Route : /books 
+Time : 2026-05-16T11:59:25.375Z, Method : GET, Route : /books/5 
+Time : 2026-05-16T11:59:29.403Z, Method : GET, Route : /books/4 
+Time : 2026-05-16T11:59:36.068Z, Method : POST, Route : /books 
+Time : 2026-05-16T11:59:45.971Z, Method : DELETE, Route : /books/22 
+Time : 2026-05-16T12:10:18.576Z, Method : DELETE, Route : /books/22 
+Time : 2026-05-16T12:10:19.632Z, Method : DELETE, Route : /books/22 
