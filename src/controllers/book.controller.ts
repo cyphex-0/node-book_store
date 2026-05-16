@@ -2,7 +2,7 @@ import { bookTable } from "../model/book.model";
 import { db } from "../db/index";
 import { and, eq } from "drizzle-orm";
 import type { Request, Response, NextFunction } from "express";
-import { authorTable } from "../model/author.model";
+
 
 export const getAllBook = async (
   req: Request,
@@ -63,43 +63,7 @@ export const createBook = async (
   return res.status(201).json({ Message: "Book created", id: newBook!.id });
 };
 
-export const getAuthor= async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) =>{
-    const authors = await db.select().from(authorTable);
-    res.json(authors);
-}
 
-export const createAuthor = async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
-  const { name, email } = req.body;
-  if (!name || name === "" || !email || email === "") {
-    return res.status(400).json({ Error: `Name and Email is needed` });
-  }
-  const isPresent = await db
-    .select()
-    .from(authorTable)
-    .where(eq(authorTable.email, email))
-    .limit(1);
-  if (isPresent.length > 0) {
-    return res.status(400).json({ Error: `email is already present` });
-  }
-  const [newAuthor] = await db
-    .insert(authorTable)
-    .values({
-      name,
-      email,
-    })
-    .returning({
-      id: authorTable.id,
-    });
-  return res.status(201).json({ Message: "Book created", id: newAuthor!.id });
-};
 
 export const deleteBookById = async (
   req: Request,
