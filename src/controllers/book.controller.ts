@@ -1,4 +1,5 @@
 import { bookTable } from "../model/book.model";
+import { authorTable } from "../model/author.model";
 import { db } from "../db/index";
 import { and, eq } from "drizzle-orm";
 import type { Request, Response, NextFunction } from "express";
@@ -8,7 +9,17 @@ export const getAllBook = async (
   res: Response,
   next: NextFunction,
 ) => {
-  const books = await db.select().from(bookTable);
+  const books = await db
+    .select({
+      book_title: bookTable.title,
+      author_name: authorTable.name,
+      description: bookTable.description,
+      book_id: bookTable.id,
+      author_id: authorTable.id,
+    })
+    .from(bookTable)
+    .innerJoin(authorTable, eq(bookTable.authorId, authorTable.id));
+
   res.json(books);
 };
 
@@ -39,6 +50,15 @@ export const createBook = async (
   if (!title || title === "" || !authorId || authorId === "") {
     return res.status(400).json({ Error: `Title and Author ID is needed` });
   }
+  const authorExist = await db
+    .select()
+    .from(authorTable)
+    .where(eq(authorTable.id, authorId))
+    .limit(1);
+  if (authorExist.length === 0) {
+    return res.status(400).json({ Error: `Author does not exist` });
+  }
+
   const isPresent = await db
     .select()
     .from(bookTable)
