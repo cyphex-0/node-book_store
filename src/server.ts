@@ -1,6 +1,5 @@
 import "dotenv/config";
 import express from "express";
-import { books } from "./db/db";
 import bookRouter from "./routes/books.routes";
 import { logger } from "./middlewares/logger";
 
@@ -13,5 +12,6 @@ app.use(express.json());
 app.use(logger);
 
 app.use("/books", bookRouter);
+app.use("/authors", bookRouter);
 
 app.listen(PORT, () => console.log(`server is listening on ${PORT}`));

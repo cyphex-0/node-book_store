@@ -26,3 +26,16 @@ Time : 2026-05-16T12:10:18.576Z, Method : DELETE, Route : /books/22
 Time : 2026-05-16T12:10:19.632Z, Method : DELETE, Route : /books/22 
 Time : 2026-05-16T12:11:05.743Z, Method : DELETE, Route : /books/22 
 Time : 2026-05-16T12:11:10.521Z, Method : DELETE, Route : /books/26 
+Time : 2026-05-16T16:23:15.840Z, Method : GET, Route : /books 
+Time : 2026-05-16T16:23:18.743Z, Method : POST, Route : /books 
+Time : 2026-05-16T16:23:22.082Z, Method : POST, Route : /books 
+Time : 2026-05-16T16:23:25.693Z, Method : GET, Route : /books/4 
+Time : 2026-05-16T16:23:29.188Z, Method : GET, Route : /books/45 
+Time : 2026-05-16T17:44:51.600Z, Method : GET, Route : /books 
+Time : 2026-05-16T17:45:41.983Z, Method : GET, Route : /books 
+Time : 2026-05-16T17:45:54.937Z, Method : GET, Route : /books/ba0e5cb7-683e-4a62-be0c-37666b0b1fc3 
+Time : 2026-05-16T17:47:59.568Z, Method : POST, Route : /books 
+Time : 2026-05-16T17:48:05.614Z, Method : GET, Route : /books 
+Time : 2026-05-16T18:00:42.944Z, Method : GET, Route : /books 
+Time : 2026-05-16T18:03:11.213Z, Method : GET, Route : /books 
+Time : 2026-05-16T18:08:12.077Z, Method : GET, Route : /books 
