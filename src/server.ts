@@ -1,5 +1,5 @@
 import express from "express";
-import { books } from "./model/db";
+import { books } from "./db/db";
 import bookRouter from "./routes/books.routes";
 import { logger } from "./middlewares/logger";
 

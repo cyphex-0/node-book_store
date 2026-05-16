@@ -7,9 +7,10 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "esnext",
+    "module": "ESNext",
     "target": "esnext",
     "types": ["node", "express"],
+    "moduleResolution": "Bundler",
     "esModuleInterop": true,
     // For nodejs:
     // "lib": ["esnext"],
@@ -41,5 +42,6 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true
-  }
+  },
+  "exclude": ["node_modules", "drizzle.config.ts"]
 }
